@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans',sans-serif;
+}
+
+h1{
+  font-size: 1.125em
+}
+
+p{
+  font-size: 1.00em
+}
+
+p.resultAddress {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+
+.resultsContainerOuter{
+  width: 60%;
+  background-color: white;
+  overflow: auto;
+}
+
+.resultsMapOuter{
+  width: 40%;
+}
+
+.resultsBox{
+  border-top: solid 1px #efefef;
+}
+
+.resultBox img{
+  max-width: 100%;
+}
+
+.resultsCurrency{
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  background: #22618d;
+  width: 75%;
+  padding: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.switch {
+  --uiSwitchSize: var(--switchSize, 40px);
+  --uiSwitchBgColor: var(--switchBgColor, #f1f1f1);
+  --uiSwitchBgColorActive: var(--switchBgColorActive, #40a0da);
+  --uiSwitchBorderColorActive: var(--switchBorderColorActive, #fff);
+  --uiSwitchBorderColorFocus: var(--switchBgColorFocus, #40a0da);
+  --uiSwitchButtonBgColor: var(--switchButtonBgColor, #fff);
+
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.switch__label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.switch__toggle {
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.switch__toggle:focus ~ .switch__label {
+  box-shadow: 0 0 0 var(--uiSwitchThickFocus, 4px)
+  var(--uiSwitchBorderColorFocus);
+}
+
+.switch__toggle:checked:focus ~ .switch__label {
+  box-shadow: 0 0 0 var(--uiSwitchThickFocus, 4px)
+  var(--uiSwitchBorderColorActive);
+}
+
+.switch__label:before,
+.switch__label:after {
+  content: "";
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.switch__label:before {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--uiSwitchBgColor);
+}
+
+.switch__label:after {
+  top: 50%;
+  z-index: 3;
+  transition: transform 0.4s cubic-bezier(0.44, -0.12, 0.07, 1.15);
+}
+
+
+.switch_type1 {
+  margin-left: 20px;
+  --uiSwitchBorderRadius: var(--switchBorderRadius, 60px);
+  width: var(--uiSwitchSize);
+  height: calc((var(--uiSwitchSize) / 2));
+  border-radius: var(--uiSwitchBorderRadius);
+  background-color: var(--uiSwitchBgColorActive);
+
+}
+
+.switch_type1 .switch__label {
+  border-radius: var(--uiSwitchBorderRadius);
+}
+
+.switch_type1 .switch__label:before {
+  border-radius: var(--uiSwitchBorderRadius);
+  transition: opacity 0.2s ease-out 0.1s, transform 0.2s ease-out 0.1s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.switch_type1 .switch__toggle:checked ~ .switch__label:before {
+  transform: scale(0);
+  opacity: 0.7;
+}
+
+.switch_type1 .switch__label:after {
+  width: calc(var(--uiSwitchSize) / 2);
+  height: calc(var(--uiSwitchSize) / 2);
+  transform: translate3d(0, -50%, 0);
+
+  background-color: var(--uiSwitchButtonBgColor);
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.switch_type1 .switch__toggle:checked ~ .switch__label:after {
+  transform: translate3d(100%, -50%, 0);
+}
+
+
+.topBar{
+  display:flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.topBar .logoContainer{
+  margin: 8px 50px 0 20px;
+}
+.secondaryBar{
+  height: calc(160px - 94px);
+  background: #fdfdfd;
+  border-bottom: solid 1px #efefef;
+}
+
+.controlButton{
+  margin: 12px 0 0 20px;
+  padding: 2px 10px;
+  border: none;
+  background: #40a0da;
+  color: #fff;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 41px;
+  cursor: pointer;
+}
+
+.controlToggle{
+  line-height: 70px;
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+.searchInput{
+  border: 1px solid #DBDBDB;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  color: #484848 !important;
+  background-color: transparent;
+  width: 500px;
+  font-weight: normal;
+  text-overflow: ellipsis ;
+  height: 50px;
+  font-size: 18px;
+  text-indent: 60px;
+}
+
+.searchInputContainer{
+  position: relative;
+}
+
+.searchInputContainer .fa{
+  position: absolute;
+  font-size: 2em;
+  top: 10px;
+  left: 15px;
+  color: #cecaca;
+}
+
+
+.searchInputContainer form{
+  display:flex;
+}
+
+.searchInputContainer button {
+  margin-left: 5px;
+  background: #40a0da;
+  padding: 0;
+  color: #fff;
+  width: 100px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  height: 52px;
+  font-size: 18px;
+  border:none;
+}
+
+.autocomplete-container{
+  position: absolute;
+  width:500px;
+}
+
+.autocomplete-container div{
+  position: relative;
+  z-index: 9999;
+}
+
+
+
+@media (max-width: 979px) {
+  /* Selectors and styles affecting screens UP TO 979px (Desktop) */
+  .resultsContainerOuter{
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+  }
+
+  .resultsMapOuter{
+    width:100%;
+    display:none;
+  }
+
+  .searchInput{
+    width:300px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Selectors and styles affecting screens UP TO 767px (Tablet) */
+  .topBar{
+    display: block;
+    width:100%;
+    text-align: center;
+  }
+  .searchInput{
+    display: block;
+    width:100%;
+    text-align: center;
+  }
+  #PlacesAutocomplete__root{
+    width:100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Selectors and styles affecting screens UP TO 480px (Phone) */
+  .controlToggle{
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  .controlButton {
+    padding: 2px 8px;
+    margin: 12px 0 0 5px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
