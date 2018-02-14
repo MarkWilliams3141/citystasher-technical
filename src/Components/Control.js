@@ -28,7 +28,7 @@ class ControlToolbar extends Component {
                 </div>
                 <div
                     className="secondaryBar"
-                    style={{ display: "flex", opacity: secondaryBarOpacity }}
+                    style={{ opacity: secondaryBarOpacity }}
                 >
                     <div>
                         <button

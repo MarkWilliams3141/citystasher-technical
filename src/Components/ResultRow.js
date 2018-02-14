@@ -13,9 +13,9 @@ class ResultRow extends Component {
         let open_late = this.props.open_late === true ? "Yes" : "No";
 
         return (
-            <div className="resultBox" style={{ display: "flex" }}>
+            <div className="resultBox">
                 <div>
-                    <div style={{ width: "300px", position: "relative" }}>
+                    <div className="resultsImageContainer">
                         {thumbnail}
                         <span className="resultsCurrency">
               First day only {currency}{" "}

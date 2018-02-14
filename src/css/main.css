@@ -24,11 +24,17 @@ p.resultAddress {
   overflow: auto;
 }
 
+.resultsImageContainer{
+  width: 300px;
+  position: relative;
+}
+
 .resultsMapOuter{
   width: 40%;
 }
 
-.resultsBox{
+.resultBox{
+  display:flex;
   border-top: solid 1px #efefef;
 }
 
@@ -162,6 +168,7 @@ p.resultAddress {
   margin: 8px 50px 0 20px;
 }
 .secondaryBar{
+  display: flex;
   height: calc(160px - 94px);
   background: #fdfdfd;
   border-bottom: solid 1px #efefef;
@@ -267,6 +274,17 @@ p.resultAddress {
     width:100%;
     text-align: center;
   }
+  .resultBox{
+    display:block;
+  }
+  .resultsImageContainer{
+    width: 100%;
+    position: relative;
+  }
+
+  .autocomplete-container{
+    max-width: 100%;
+  }
   .searchInput{
     display: block;
     width:100%;
@@ -275,9 +293,21 @@ p.resultAddress {
   #PlacesAutocomplete__root{
     width:100%;
   }
+  .controlToggle{
+    font-size: 14px;
+  }
+  .controlButton{
+    font-size: 14px;
+    margin: 8px 0 0 10px;
+  }
+
 }
 
 @media (max-width: 480px) {
+  .secondaryBar{
+    display: block;
+    height: initial;
+  }
   /* Selectors and styles affecting screens UP TO 480px (Phone) */
   .controlToggle{
     font-size: 14px;
@@ -285,9 +315,10 @@ p.resultAddress {
   }
 
   .controlButton {
+    margin:12px 0 0 0;
     padding: 2px 8px;
-    margin: 12px 0 0 5px;
     font-size: 14px;
+    width:100%;
   }
 }
 
