@@ -161,6 +161,7 @@ class App extends React.Component {
      * Remove event listener
      */
     componentWillUnmount() {
+        //to prevent memory leak
         window.removeEventListener("resize", this.updateDimensions.bind(this));
     }
 
